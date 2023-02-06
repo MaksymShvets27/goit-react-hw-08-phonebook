@@ -1,0 +1,18 @@
+.nav {
+  display: block;
+  color: white;
+  background-color: silver;
+}
+
+.nav ul {
+  display: flex;
+  padding: 10px;
+  gap: 20px;
+}
+
+.nav_active {
+  color: #111;
+  border: 2px solid #111;
+  background-color: white;
+  padding: 5px;
+}
