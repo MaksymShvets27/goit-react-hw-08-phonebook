@@ -24,7 +24,7 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route
-            index
+            path="contacts"
             element={
               <ProtectedRoute
                 component={<ContactsPage />}
@@ -34,14 +34,18 @@ export const App = () => {
           />
           <Route
             path="login"
-            element={<RestrictedRoute component={<Login />} fallbackUrl="/" />}
+            element={
+              <RestrictedRoute component={<Login />} fallbackUrl="/contacts" />
+            }
           />
           <Route
             path="singup"
-            element={<RestrictedRoute component={<Singup />} fallbackUrl="/" />}
+            element={
+              <RestrictedRoute component={<Singup />} fallbackUrl="/contacts" />
+            }
           />
         </Route>
-        <Route path="*" element={<Navigate to="/" />} />
+        <Route path="*" element={<Navigate to="/contacts" />} />
       </Routes>
     </div>
   );
